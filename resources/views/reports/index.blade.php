@@ -21,13 +21,6 @@
 
         </a>
 
-        <a href="/reports/excel"
-           class="btn btn-success">
-
-            Export Excel
-
-        </a>
-
     </div>
 
 </div>

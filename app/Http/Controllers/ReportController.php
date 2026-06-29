@@ -6,8 +6,6 @@ use App\Models\Sale;
 use App\Models\Finance;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
-use Maatwebsite\Excel\Facades\Excel;
-use App\Exports\SalesExport;
 
 class ReportController extends Controller
 {
@@ -27,7 +25,7 @@ class ReportController extends Controller
     }
 
     public function pdf()
-{
+    {
     $sales = Sale::all();
 
     $finances = Finance::all();
@@ -42,14 +40,6 @@ class ReportController extends Controller
 
     return $pdf->download(
         'laporan-umkm.pdf'
-    );
-}
-
-public function excel()
-{
-    return Excel::download(
-        new SalesExport,
-        'laporan-penjualan.xlsx'
     );
 }
 

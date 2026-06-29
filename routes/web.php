@@ -46,10 +46,6 @@ Route::get('/reports/pdf',
     [ReportController::class,'pdf']
 )->middleware('login');
 
-Route::get('/reports/excel',
-    [ReportController::class,'excel']
-)->middleware('login');
-
 Route::resource(
     'business-profile',
     BusinessProfileController::class
